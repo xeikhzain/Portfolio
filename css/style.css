@@ -1,0 +1,468 @@
+* {
+  padding: 3px 10px;
+  margin: 0 auto;
+  max-width: 1500px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+}
+
+.header-logo-links img {
+  width: 60px;
+  height: 100%;
+  padding: 0;
+  margin: 0 !important;
+}
+
+.header-logo-links {
+  display: flex;
+  justify-content: space-between;
+  width: 37%;
+  align-items: center;
+  float: left;
+  padding: 0;
+}
+
+.header-logo-links ul li {
+  display: inline;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.header-logo-links ul li a {
+  text-decoration: none;
+  color: #2a2a2a;
+}
+
+.nav-contact {
+  float: right;
+  padding: .6rem 0;
+}
+
+.btn {
+  font-family: "Orbitron", sans-serif;
+  --border-color: linear-gradient(-45deg, #2a2a2a, #f76836, #676666);
+  --border-width: 0.125em;
+  --curve-size: 0.5em;
+  --blur: 30px;
+  --bg: #080312;
+  --color: #ffffff;
+  color: var(--color);
+  cursor: pointer;
+  /* use position: relative; so that BG is only for .btn */
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  place-content: center;
+  padding: 0.5em 1.5em;
+  font-size: 17px;
+  border: 0;
+  text-transform: uppercase;
+  margin: 0 7px 0 0;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+  clip-path: polygon(
+      /* Top-left */
+      0% var(--curve-size),
+      var(--curve-size) 0,
+      /* top-right */
+      100% 0,
+      100% calc(100% - var(--curve-size)),
+      /* bottom-right 1 */
+      calc(100% - var(--curve-size)) 100%,
+      /* bottom-right 2 */
+      0 100%);
+  transition: color 250ms;
+}
+
+.btn::after,
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.btn::before {
+  background: var(--border-color);
+  background-size: 300% 300%;
+  animation: move-bg7234 5s ease infinite;
+  z-index: -2;
+}
+
+@keyframes move-bg7234 {
+  0% {
+    background-position: 31% 0%;
+  }
+
+  50% {
+    background-position: 70% 100%;
+  }
+
+  100% {
+    background-position: 31% 0%;
+  }
+}
+
+.btn::after {
+  background: var(--bg);
+  z-index: -1;
+  clip-path: polygon(
+      /* Top-left */
+      var(--border-width) calc(var(--curve-size) + var(--border-width) * 0.5),
+      calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width),
+      /* top-right */
+      calc(100% - var(--border-width)) var(--border-width),
+      calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+      /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)),
+      /* bottom-right 2 */
+      var(--border-width) calc(100% - var(--border-width)));
+  transition: clip-path 500ms;
+}
+
+.btn:where(:hover, :focus)::after {
+  clip-path: polygon(
+      /* Top-left */
+      calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+      calc(100% - var(--border-width)) var(--border-width),
+      /* top-right */
+      calc(100% - var(--border-width)) var(--border-width),
+      calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+      /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)),
+      /* bottom-right 2 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)));
+  transition: 200ms;
+}
+
+.btn:where(:hover, :focus) {
+  color: #fff;
+}
+
+/* btn 2 */
+.button-2 {
+  font-family: "Orbitron", sans-serif;
+  --border-color: linear-gradient(-45deg, #2a2a2a, #f76836, #676666);
+  --border-width: 0.125em;
+  --curve-size: 0.5em;
+  --blur: 30px;
+  --bg: #080312;
+  --color: #ffffff;
+  color: var(--color);
+  cursor: pointer;
+  /* use position: relative; so that BG is only for .btn */
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  place-content: center;
+  padding: 0.5em 1.5em;
+  font-size: 17px;
+  border: 0;
+  text-transform: uppercase;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+  clip-path: polygon(
+      /* Top-left */
+      0% var(--curve-size),
+      var(--curve-size) 0,
+      /* top-right */
+      100% 0,
+      100% calc(100% - var(--curve-size)),
+      /* bottom-right 1 */
+      calc(100% - var(--curve-size)) 100%,
+      /* bottom-right 2 */
+      0 100%);
+  transition: color 250ms;
+}
+
+.button-2::after,
+.button-2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.button-2::before {
+  background: var(--border-color);
+  background-size: 300% 300%;
+  animation: move-bg7234 5s ease infinite;
+  z-index: -2;
+}
+
+@keyframes move-bg7234 {
+  0% {
+    background-position: 31% 0%;
+  }
+
+  50% {
+    background-position: 70% 100%;
+  }
+
+  100% {
+    background-position: 31% 0%;
+  }
+}
+
+.button-2::after {
+  background: var(--bg);
+  z-index: -1;
+  clip-path: polygon(
+      /* Top-left */
+      var(--border-width) calc(var(--curve-size) + var(--border-width) * 0.5),
+      calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width),
+      /* top-right */
+      calc(100% - var(--border-width)) var(--border-width),
+      calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+      /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)),
+      /* bottom-right 2 */
+      var(--border-width) calc(100% - var(--border-width)));
+  transition: clip-path 500ms;
+}
+
+.button-2:where(:hover, :focus)::after {
+  clip-path: polygon(
+      /* Top-left */
+      calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+      calc(100% - var(--border-width)) var(--border-width),
+      /* top-right */
+      calc(100% - var(--border-width)) var(--border-width),
+      calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+      /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)),
+      /* bottom-right 2 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)));
+  transition: 200ms;
+}
+
+.button-2:where(:hover, :focus) {
+  color: #fff;
+}
+
+
+.parent-header {
+  width: 100%;
+  padding: 0px 20px;
+  margin: 0 auto;
+  max-width: 1500px;
+}
+
+.parent-header {
+  display: flex;
+}
+
+.grid-container {
+  width: 50px;
+  height: 50px;
+  background-color: #000;
+  border: 1px solid #ffffff1d;
+  transition: background-color 0.5s ease, opacity 3s ease-out;
+cursor: cell;
+}
+
+.grid-container:hover {
+  background-color: #f76836;
+  opacity: 0.7;
+}
+
+.grid-container:hover~.grid-container {
+  opacity: 0.4;
+}
+
+.grid-container:hover~.grid-container:hover {
+  opacity: 0.7;
+}
+
+.grid-container:hover~.grid-container:hover~.grid-container {
+  opacity: 0.4;
+}
+
+.main-hero {
+  clip-path: polygon(0 0, 90% 0, 127% 100%, 67% 208%, 0 79%);
+}
+
+.header-content h1{
+ color: #ffffff;
+ position: absolute;
+ margin-top: -416px;
+ margin-left: 100px;
+ font-size: 50px;
+cursor: cell;
+}
+.header-content h1 span{
+color: #f76836;
+}
+.header-content h3{
+  color: #ffffff;
+  position: absolute;
+  margin-top: -250px;
+  margin-left: 100px;
+ cursor: cell;
+}
+
+.header-content p{
+  color: #ffffff;
+  position: absolute;
+  margin-top: -210px;
+  margin-left: 100px;
+ cursor: cell;
+ width: 50%;
+}
+
+/* Media query */
+@media screen and (max-width :1196px) {
+  .header-logo-links {
+    width: 42%;
+  }
+}
+
+@media screen and (max-width :1065px) {
+  .header-logo-links {
+    width: 46%;
+  }
+}
+
+@media screen and (max-width :985px) {
+  .header-logo-links {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width :904px) {
+  .header-logo-links {
+    width: 54%;
+  }
+}
+
+@media screen and (max-width :848px) {
+  .header-logo-links {
+    width: 59%;
+  }
+}
+
+@media screen and (max-width :789px) {
+  .header-logo-links {
+    width: 63%;
+  }
+}
+
+@media screen and (max-width :735px) {
+  .header-logo-links {
+    width: 100%;
+  }
+
+  .btn {
+    display: none;
+  }
+
+  .button-2 {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width :736px) {
+  .button-2 {
+  display: none;
+  }
+}
+@media screen and (max-width :494px) {
+.nav-parent{
+  padding: 0;
+}
+body{
+  padding: 3px 0px;
+}
+nav{
+  padding: 0;
+}
+}
+@media screen and (max-width :494px) {
+.header-logo-links ul li a {
+font-size: 13px;
+}
+.header-logo-links img {
+width: 50px;
+}
+}
+@media screen and (max-width :384px) {
+  .header-logo-links ul li a {
+  font-size: 13px;
+  }
+  .header-logo-links img {
+  width: 40px;
+  }
+  }
+@media screen and (max-width :379px) {
+  .header-logo-links ul li a {
+    font-size: 12px;
+    }
+    .header-logo-links img {
+    width: 35px;
+    }
+    .button-2{
+    padding: 0.5em 1.5em;
+    font-size: 12px;
+    }
+  .header-logo-links li {
+  padding: 0;
+  }
+}
+@media screen and (max-width : 1024px) {
+  .grid-container{
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (max-width : 850px) {
+  .grid-container{
+    width: 35px;
+    height: 35px;
+  }
+}
+@media screen and (max-width : 768px) {
+  .sm-none{
+    display: none;
+  }
+  .main-hero {
+    clip-path: polygon(0 0, 85% 0, 140% 100%, 90% 208%, 0 77%);
+}
+}
+@media screen and (max-width : 992px) {
+  .mobile-none{
+    display: none;
+  }
+  .grid-container{
+    width: 70px !important;
+    height:70px !important;
+  }
+  .mid-none{
+    display: none !important;
+  }
+}
+@media screen and (max-width : 1250px) {
+  .grid-container{
+    width: 55px;
+    height:50px;
+  }
+  .large-none{
+  display: none;
+}
+}
+@media screen and (max-width : 550px) {
+.s-none{
+  display: none !important;
+}
+.grid-container{
+  width: 50px !important;
+  height:40px !important; 
+}
+.main-hero {
+  clip-path: polygon(0 0, 83% 0, 136% 100%, 107% 220%, 0 73%);
+}
+
+}
+@media screen and (max-width : 400px) {
+.xs-none{
+  display: none;
+}
+}
