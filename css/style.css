@@ -7,6 +7,13 @@
 
 body {
   font-family: "Orbitron", sans-serif;
+  background-color: var(--bg-color);
+}
+
+:root{
+  --bg-color: #f8f8f8;
+  --accent: #f76836;
+  --black: #2a2a2a;
 }
 
 .header-logo-links img {
@@ -33,7 +40,7 @@ body {
 
 .header-logo-links ul li a {
   text-decoration: none;
-  color: #2a2a2a;
+  color: var(--black);
 }
 
 .nav-contact {
@@ -47,8 +54,8 @@ body {
   --border-width: 0.125em;
   --curve-size: 0.5em;
   --blur: 30px;
-  --bg: #080312;
-  --color: #ffffff;
+  --bg: #2a2a2a;
+  --color: var(--bg-color);
   color: var(--color);
   cursor: pointer;
   /* use position: relative; so that BG is only for .btn */
@@ -147,7 +154,7 @@ body {
   --border-width: 0.125em;
   --curve-size: 0.5em;
   --blur: 30px;
-  --bg: #080312;
+  --bg: #2a2a2a;
   --color: #ffffff;
   color: var(--color);
   cursor: pointer;
@@ -236,7 +243,7 @@ body {
 }
 
 .button-2:where(:hover, :focus) {
-  color: #fff;
+  color: var(--bg-color);
 }
 
 
@@ -254,7 +261,7 @@ body {
 .grid-container {
   width: 50px;
   height: 50px;
-  background-color: #000;
+  background-color: var(--black);
   border: 1px solid #ffffff1d;
   transition: background-color 0.5s ease, opacity 3s ease-out;
 cursor: cell;
@@ -278,11 +285,11 @@ cursor: cell;
 }
 
 .main-hero {
- clip-path: polygon(0 0, 87.2% 0%, 100% 24.2%, 100% 100%, 13% 100%, 0% 76%);
+  clip-path: polygon(0 27%, 9.2% 0, 100% 0, 100% 73%, 90.8% 100%, 0 100%);
 }
 
 .header-content h1{
- color: #ffffff;
+ color: var(--bg-color);
  position: absolute;
  margin-top: -416px;
  margin-left: 100px;
@@ -293,7 +300,7 @@ cursor: cell;
 color: #f76836;
 }
 .header-content h3{
-  color: #ffffff;
+ color: var(--bg-color);
   position: absolute;
   margin-top: -250px;
   margin-left: 100px;
@@ -301,7 +308,7 @@ color: #f76836;
 }
 
 .header-content p{
-  color: #ffffff;
+ color: var(--bg-color);
   position: absolute;
   margin-top: -210px;
   margin-left: 100px;
@@ -364,6 +371,10 @@ color: #f76836;
   .button-2 {
   display: none;
   }
+  .header-content h1{
+    font-size: 35px !important;
+  }
+  
 }
 @media screen and (max-width :494px) {
 .nav-parent{
@@ -423,6 +434,10 @@ width: 50px;
   .sm-none{
     display: none;
   }
+  .main-hero{
+    margin-top: -48px;
+    clip-path: polygon(0 30%, 22.2% 0, 100% 0, 100% 79%, 83.8% 100%, 0 100%) !important;
+  }
 }
 @media screen and (max-width : 992px) {
   .mobile-none{
@@ -434,6 +449,13 @@ width: 50px;
   }
   .mid-none{
     display: none !important;
+  }
+  .header-content h1{
+    width: 72% !important;
+    font-size: 40px;
+  }
+  .main-hero{
+    clip-path: polygon(0 26%, 12.2% 0, 100% 0, 100% 76%, 87.8% 100%, 0 100%);
   }
 }
 @media screen and (max-width : 1250px) {
@@ -463,10 +485,25 @@ width: 50px;
   width: 50px !important;
   height:40px !important; 
 }
+.header-content h1{
+  font-size: 30px !important;
+}
 
+.header-content p{
+margin-top: 0px !important;
+color: #080312;
+width: 85% !important;
+margin-left: 10px !important; 
+}
 }
 @media screen and (max-width : 400px) {
 .xs-none{
   display: none;
+}
+}
+@media screen and (max-width : 725px) {
+.header-content h1{
+  font-size: 35px;
+margin-top: -350px !important;
 }
 }
