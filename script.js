@@ -5,3 +5,10 @@ var typed = new Typed(".typing", {
     loop: true
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+        document.querySelector(".preloader").style.opacity = 0;
+        document.querySelector(".preloader").style.pointerEvents = "none";
+        document.querySelector(".content").style.display = "block";
+        }, 3000);
+});
