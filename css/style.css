@@ -8,6 +8,9 @@
 body {
   font-family: "Orbitron", sans-serif;
   background-color: var(--bg-color);
+  overflow-x: hidden;
+}
+.main-section{
   padding: 0 30px;
   margin: 0 auto;
   max-width: 1500px;
@@ -17,7 +20,7 @@ body {
   --bg-color: #f8f8f8;
   --accent: #f76836;
   --black: #1a1a1a;
-  --secondary-bg: rgb(216, 216, 216);
+  --secondary-bg: rgb(231, 231, 231);
 }
 
 .header-logo-links img {
@@ -610,7 +613,28 @@ nav {
   transition: 0.4s;
   transform: translateX(-56px);
 }
-
+marquee{
+  margin: 6rem 0 0 0;
+  background-color: var(--secondary-bg);
+  padding: 1rem;
+  transform: rotate(5deg);
+  color: #f76836;
+  font-size: 25px;
+  max-width: 1500px;
+  font-weight: 600;
+  width: 100%;
+  box-shadow:2px 2px 10px 5px rgba(0, 0, 0, 0.119) ;
+}
+.merq-2{
+  margin: 0 0;
+  transform: rotate(-9deg);
+}
+.merq-h{
+  margin: 4rem 0 0 0;
+}
+marquee span{
+padding: 0 5rem;
+}
 
 
 /* Media query */
@@ -1171,6 +1195,7 @@ nav {
   .projects {
     margin: 0 auto;
     justify-content: center;
+    padding-right:1rem;
   }
 
   .res-edit {
@@ -1183,17 +1208,16 @@ nav {
     width: 100% !important;
   }
 
-  .pro-2 {
-    margin: 0 0 0 .4rem;
-  }
-
   .pro-1 {
-    width: 250px;
+    width: 100%;
     height: 200px;
   }
 
   .pro-res {
-    width: auto !important;
+    width: 100% !important;
+  }
+  .pro-res-2{
+    width: 100%;
   }
 
   .projects h4 {
